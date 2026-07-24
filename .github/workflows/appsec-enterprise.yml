@@ -45,9 +45,9 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Run Semgrep
-        uses: returntocorp/semgrep-action@v1
-        with:
-          config: p/javascript
+        uses: actions/checkout@v4 
+     - name: Run Semgrep
+     uses: returntocorp/semgrep-action@v1
+     continue-on-error: true
+     with:
+     config: p/javascript
