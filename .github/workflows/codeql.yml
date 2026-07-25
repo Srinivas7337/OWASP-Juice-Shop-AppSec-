@@ -2,13 +2,9 @@ name: CodeQL Analysis
 
 on:
   push:
-    branches:
-      - main
-
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
-
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -18,17 +14,22 @@ permissions:
 
 jobs:
   analyze:
-    name: CodeQL Scan
+    name: Analyze
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'javascript-typescript' ]
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: javascript-typescript
+          languages: ${{ matrix.language }}
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3
