@@ -71,3 +71,34 @@ config/*.yml
 # Misc
 .playwright-mcp/
 cypress/screenshots/
+# CodeQL generated database
+db/
+
+# Generated security reports
+reports/dependency-check-report.html
+reports/kubescape-report.json
+reports/reports/
+
+# Generated SARIF reports
+*.sarif
+
+# General generated reports
+*.html
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
