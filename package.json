@@ -203,7 +203,7 @@
     "exif": "^0.6.0",
     "globals": "^17.4.0",
     "grunt-cli": "^1.5.0",
-    "neostandard": "^0.13.0",
+    "neostandard": "^0.14.1",
     "nyc": "^15.1.0",
     "socket.io-client": "^3.1.3",
     "supertest": "^7.2.2",
